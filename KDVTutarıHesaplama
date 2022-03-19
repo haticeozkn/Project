@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class KDVTutarıHesaplama {
+    public static void main(String[] args) {
+        double tutar;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Tutar Giriniz: ");
+        tutar = input.nextDouble();
+        System.out.println("KDVsiz Tutar: " + tutar);
+        double KDVOran = (tutar>1000 ? 0.08 : 0.18);
+        System.out.println("KDV Oranı: " + KDVOran);
+        double KDVTutar = tutar * KDVOran;
+        System.out.println("KDVTutarı: "+ KDVTutar);
+        double KDVliTutar = tutar + KDVTutar;
+        System.out.print("KDVli Tutar: " + KDVliTutar);

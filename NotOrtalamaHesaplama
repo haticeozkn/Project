@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class NotOrtalama {
+    public static void main(String[] args) {
+        int Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Matematik notunuzu giriniz: ");
+        Matematik = input.nextInt();
+
+        System.out.print("Fizik notunuzu giriniz: ");
+        Fizik = input.nextInt();
+
+        System.out.print("Kimya notunuzu giriniz: ");
+        Kimya = input.nextInt();
+
+        System.out.print("Türkçe notunuzu giriniz: ");
+        Türkçe = input.nextInt();
+
+        System.out.print("Tarih notunuzu giriniz: ");
+        Tarih = input.nextInt();
+
+        System.out.print("Müzik notunuzu giriniz: ");
+        Müzik = input.nextInt();
+
+        int Toplam = (Matematik + Fizik + Kimya + Türkçe + Tarih + Müzik);
+        System.out.println("Not Toplamı: " + Toplam);
+
+        double Ortalama = Toplam/6;
+        System.out.println("Not Ortalaması: " + Ortalama);
+
+        String durum = (Ortalama>=60 ? "Sınıfı Geçtiniz" : "Sınıfta Kaldınız");
+        System.out.println(durum);
+
+    }
+}

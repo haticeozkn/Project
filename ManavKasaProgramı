@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class ManavKasaProgramı {
+    public static void main(String[] args) {
+        double armutKg,elmaKg,domatesKg,muzKg,patlıcanKg;
+        double armutTl,elmaTl,domatesTl,muzTl,patlıcanTl;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kaç kg armut istiyorsunuz? ");
+        armutKg = input.nextDouble();
+        armutTl = armutKg * 2.14;
+        System.out.print("Kaç kg elma istiyorsunuz? ");
+        elmaKg = input.nextDouble();
+        elmaTl = elmaKg * 3.67;
+        System.out.print("Kaç kg domates istiyorsunuz? ");
+        domatesKg = input.nextDouble();
+        domatesTl = domatesKg * 1.11;
+        System.out.print("Kaç kg muz istiyorsunuz? ");
+        muzKg = input.nextDouble();
+        muzTl = muzKg * 0.95;
+        System.out.print("Kaç kg patlıcan istiyorsunuz? ");
+        patlıcanKg = input.nextDouble();
+        patlıcanTl = patlıcanKg * 5.00;
+
+        double tutar;
+        tutar = armutTl+elmaTl+domatesTl+muzTl+patlıcanTl;
+        System.out.println("Toplam Tutar: " + tutar +" TL'dir.");
+
+
+    }
+}

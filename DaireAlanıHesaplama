@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class DaireAlanı {
+    public static void main(String[] args) {
+        double r,a,alan,pi=3.14;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Dairenin yarıçapı(r) giriniz: ");
+        r = input.nextDouble();
+        System.out.print("Dairenin açısını(a) giriniz: ");
+        a = input.nextDouble();
+        alan = (pi * (r*r) * a) / 360;
+        System.out.print("Alan: " + alan);

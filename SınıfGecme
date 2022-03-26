@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class SınıfıGecmeDurumu {
     public static void main(String[] args) {
         int matematik,fizik,türkce,kimya,müzik;
-        double ortalama, toplam=0;
+        double ortalama, toplam=0, sayac=0;
         Scanner input = new Scanner(System.in);
 
         System.out.print("Matematik notunuzu giriniz: ");
         matematik = input.nextInt();
         if (matematik >= 0 && matematik <=100){
             toplam += matematik;
+            sayac++;
         }else {
             System.out.println("Matematik Notunuz 0-100 Aralığında Değildir. Ortalamaya Dahil Edilmeyecektir.");
         }
@@ -18,6 +19,7 @@ public class SınıfıGecmeDurumu {
         fizik = input.nextInt();
         if (fizik >= 0 && fizik <=100){
             toplam += fizik;
+            sayac++;
         }else {
             System.out.println("Fizik Notunuz 0-100 Aralığında Değildir. Ortalamaya Dahil Edilmeyecektir.");
         }
@@ -26,6 +28,7 @@ public class SınıfıGecmeDurumu {
         türkce = input.nextInt();
         if (türkce >= 0 && türkce <=100){
             toplam += türkce;
+            sayac++;
         }else {
             System.out.println("Türkçe Notunuz 0-100 Aralığında Değildir. Ortalamaya Dahil Edilmeyecektir.");
         }
@@ -34,6 +37,7 @@ public class SınıfıGecmeDurumu {
         kimya = input.nextInt();
         if (kimya >= 0 && kimya <=100){
             toplam += kimya;
+            sayac++;
         }else {
             System.out.println("Kimya Notunuz 0-100 Aralığında Değildir. Ortalamaya Dahil Edilmeyecektir.");
         }
@@ -42,11 +46,12 @@ public class SınıfıGecmeDurumu {
         müzik = input.nextInt();
         if (müzik >= 0 && müzik <=100){
             toplam += müzik;
+            sayac++;
         }else {
             System.out.println("Müzik Notunuz 0-100 Aralığında Değildir. Ortalamaya Dahil Edilmeyecektir.");
         }
 
-        ortalama = toplam / 5;
+        ortalama = toplam / sayac;
         System.out.println("Ortalamanız: " + ortalama);
         if (ortalama >=55) {
             System.out.println("Sınıfı Geçtiniz!");

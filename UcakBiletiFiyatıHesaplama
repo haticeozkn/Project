@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class UcakBiletiFiyatıHesaplama {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("KM giriniz: ");
+        double km = input.nextDouble();
+        if(km<0){
+            System.out.println("Hatalı veri girdiniz.");
+        }
+        System.out.print("Yaşınızı giriniz: ");
+        double yas = input.nextDouble();
+        if(yas<0){
+            System.out.println("Hatalı veri girdiniz.");
+        }
+        System.out.print("Yolculuk tipini giriniz. \n" +
+                " 1=gidiş, 2=gidiş-dönüş: ");
+        double yt = input.nextDouble();
+        if ( yt!=1 && yt!=2) {
+            System.out.println( "hatalı veri girdiniz");
+        }
+
+        double tutar,yasindirimi,indirimlitutar ,gidisdönüsbiletindirimi,toplamtutar;
+        if (yt==1 && km>0 && yas>0)  {
+            tutar = km * 0.10;
+            if (yas < 12) {
+                yasindirimi = tutar * 0.5;
+                indirimlitutar = tutar - yasindirimi;
+                System.out.println("toplam tutar: " + indirimlitutar);
+            } else if (yas > 12 && yas < 24) {
+                yasindirimi = tutar * 0.10;
+                indirimlitutar = tutar - yasindirimi;
+                System.out.println("toplam tutar: " + indirimlitutar);
+            } else if (yas > 65) {
+                yasindirimi = tutar * 0.30;
+                indirimlitutar = tutar - yasindirimi;
+                System.out.println("toplam tutar: " + indirimlitutar);
+            } else {
+                System.out.println("toplam tutar: " + tutar);
+            }
+
+        }
+        if (yt==2) {
+            tutar = km * 0.10;
+            if (yas < 12) {
+                yasindirimi = tutar * 0.5;
+                indirimlitutar = tutar - yasindirimi;
+                gidisdönüsbiletindirimi= indirimlitutar*0.20;
+                toplamtutar= (indirimlitutar-gidisdönüsbiletindirimi)*2;
+                System.out.println("toplam tutar: " + toplamtutar);
+            } else if (yas > 12 && yas < 24) {
+                yasindirimi = tutar * 0.10;
+                indirimlitutar = tutar - yasindirimi;
+                gidisdönüsbiletindirimi= indirimlitutar*0.20;
+                toplamtutar= (indirimlitutar-gidisdönüsbiletindirimi)*2;
+                System.out.println("toplam tutar: " + toplamtutar);
+            } else if (yas > 65) {
+                yasindirimi = tutar * 0.30;
+                indirimlitutar = tutar - yasindirimi;
+                gidisdönüsbiletindirimi= indirimlitutar*0.20;
+                toplamtutar= (indirimlitutar-gidisdönüsbiletindirimi)*2;
+                System.out.println("toplam tutar: " + toplamtutar);
+            } else {
+                System.out.println("toplam tutar: " + tutar);
+            }
+
+        }
+        
+
+    }
+}

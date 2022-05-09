@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class OrtalamaHesaplama{
+    public static void main(String[] args) {
+        int k,ort;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Sayı Giriniz: ");
+        k = input.nextInt();
+        int toplam =0 , n=0;
+        for(int i =0; i<=k; i++){
+            if (i%3==0 && i%4==0) {
+                System.out.println(i);
+                toplam = toplam + i;
+                n++;
+            }
+        }
+        System.out.println("Ortalama: " + toplam/n);
+    }
+}
